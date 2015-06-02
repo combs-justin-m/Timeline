@@ -9,6 +9,7 @@ $lightblue: #B1DBF5;
 $blue: #6FC0EC;
 $darkblue: #3F96C7;
 $white: #FFFFFF;
+$gray: #B5C9D5;
 
 /******************
 Main
@@ -28,20 +29,35 @@ main {
 }
 
 aside {
-  @include span-columns(3);
+  @include span-columns(2);
+  position: relative;
   height: 100%;
 }
 
 
 section {
   overflow: auto;
+  padding-top: 5px;
 }
 
 article {
-  @include span-columns(9);
+  @include span-columns(10);
+  position: relative;
   height: 100%;
-  padding: 0 15px 15px;
-  border-left: 10px solid $lightblue;
+  padding: 0 25px 15px;
+  border-left: 8px solid $lightblue;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    top: 8px;
+    left: 24px;
+    border: 8px solid transparent;
+    border-right-color: $darkblue;
+    position: absolute;
+  }
 }
 
 figure {
@@ -51,10 +67,11 @@ figure {
   padding: 25px;
   border-radius: 5px;
 
-  h1 {
+  h3 {
     font-size: 22px;
     color: $white;
-    margin: 0;
+    margin-top: 0;
+    padding-bottom: 10px;
     border-bottom: 1px solid $white;
     text-align: left;
   }
@@ -63,11 +80,15 @@ figure {
     color: $white;
     font-size: 14px;
     font-weight: 300;
+    margin: 0;
   }
 }
 
 .timeIcon {
-
+  position: absolute;
+  right: -51.5px;
+  top: -6px;
+  z-index: 10;
 }
 
 .inner-ring {
@@ -78,4 +99,22 @@ figure {
   color: $lightblue;
   font-size: 50px;
   top: -3.5px;
+}
+
+.stamp {
+  float: right;
+}
+
+.date {
+  color: $gray;
+  font-size: 11px;
+  float: right;
+  margin: 0 5px;
+}
+
+.hour {
+  color: $darkblue;
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0;
 }

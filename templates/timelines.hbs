@@ -1,0 +1,22 @@
+
+{{#each timelines}}
+<section>
+  <aside>
+    {{timestamp}}
+
+    <span class="fa-stack fa-lg timeIcon">
+      <i class="fa fa-circle fa-stack-2x outer-ring"></i>
+      <i class="fa fa-circle fa-stack-2x inner-ring"></i>
+      <i class="fa {{icon}} fa-stack-1x fa-inverse"></i>
+    </span>
+
+  </aside>
+  <article>
+    <figure>
+      <h1>{{ title }}</h1>
+      <p>{{content}}</p>
+    </figure>
+  </article>
+</section>
+{{/each}}
+

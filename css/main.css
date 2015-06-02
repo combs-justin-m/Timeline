@@ -5,3 +5,73 @@ html {
 *::after,
 *::before {
   box-sizing: inherit; }
+
+/******************
+Variables
+******************/
+/******************
+Main
+******************/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1 {
+  text-align: center; }
+
+main {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px; }
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 100%; }
+  aside:last-child {
+    margin-right: 0; }
+
+section {
+  overflow: auto; }
+
+article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  height: 100%;
+  padding: 0 15px 15px;
+  border-left: 10px solid #B1DBF5; }
+  article:last-child {
+    margin-right: 0; }
+
+figure {
+  background: #3F96C7;
+  height: 100%;
+  margin: 0 15px;
+  padding: 25px;
+  border-radius: 5px; }
+  figure h1 {
+    font-size: 22px;
+    color: #FFFFFF;
+    margin: 0;
+    border-bottom: 1px solid #FFFFFF;
+    text-align: left; }
+  figure p {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 300; }
+
+.inner-ring {
+  color: #3F96C7; }
+
+.outer-ring {
+  color: #B1DBF5;
+  font-size: 50px;
+  top: -3.5px; }

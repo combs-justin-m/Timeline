@@ -3,7 +3,7 @@ $.getJSON('http://private-44f6d-timeline6.apiary-mock.com/timeline').done(functi
 
   data.timelines.forEach(function(post){
     var date = moment(post.timestamp);
-    post.timerHour = date.format("h:mm");
+    post.timerHour = date.format("hh:mm");
     post.timerDate = date.format("MM/DD/YY");
   })
 

@@ -118,3 +118,50 @@ figure {
   font-weight: 300;
   margin: 0;
 }
+
+/******************
+Media
+******************/
+
+@media (max-width: 1000px) {
+
+  aside {
+    @include span-columns(12);
+  }
+
+  article {
+    @include span-columns(12);
+    border-left: none;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      top: -16px;
+      left: 66px;
+      border: 8px solid transparent;
+      border-bottom-color: $darkblue;
+      position: absolute;
+    }
+  }
+
+  .stamp {
+    float: left;
+    margin: 0 0 10px 40px;
+  }
+
+  .timeIcon {
+    right: 40px;
+    top: 0;
+  }
+
+  .date {
+    float: left;
+  }
+
+  .hour {
+    font-size: 28px;
+  }
+
+}

@@ -111,3 +111,43 @@ figure {
   font-size: 42px;
   font-weight: 300;
   margin: 0; }
+
+/******************
+Media
+******************/
+@media (max-width: 1000px) {
+  aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    aside:last-child {
+      margin-right: 0; }
+  article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    border-left: none; }
+    article:last-child {
+      margin-right: 0; }
+    article:before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      top: -16px;
+      left: 66px;
+      border: 8px solid transparent;
+      border-bottom-color: #3F96C7;
+      position: absolute; }
+  .stamp {
+    float: left;
+    margin: 0 0 10px 40px; }
+  .timeIcon {
+    right: 40px;
+    top: 0; }
+  .date {
+    float: left; }
+  .hour {
+    font-size: 28px; } }

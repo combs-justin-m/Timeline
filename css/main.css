@@ -41,6 +41,34 @@ aside {
 section {
   overflow: auto;
   padding-top: 5px; }
+  section:nth-child(even) figure {
+    background: #3F96C7; }
+  section:nth-child(even) article:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    top: 8px;
+    left: 24px;
+    border: 8px solid transparent;
+    position: absolute;
+    border-right-color: #3F96C7; }
+  section:nth-child(even) .hour {
+    color: #3F96C7; }
+  section:nth-child(odd) figure {
+    background: #6FC0EC; }
+  section:nth-child(odd) article:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    top: 8px;
+    left: 24px;
+    border: 8px solid transparent;
+    position: absolute;
+    border-right-color: #6FC0EC; }
+  section:nth-child(odd) .hour {
+    color: #6FC0EC; }
 
 article {
   float: left;
@@ -53,19 +81,8 @@ article {
   border-left: 8px solid #B1DBF5; }
   article:last-child {
     margin-right: 0; }
-  article:before {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    top: 8px;
-    left: 24px;
-    border: 8px solid transparent;
-    border-right-color: #3F96C7;
-    position: absolute; }
 
 figure {
-  background: #3F96C7;
   height: 100%;
   margin: 0 15px;
   padding: 25px;
@@ -123,6 +140,26 @@ Media
     width: 100%; }
     aside:last-child {
       margin-right: 0; }
+  section:nth-child(even) article:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    top: -16px;
+    left: 66px;
+    border: 8px solid transparent;
+    position: absolute;
+    border-bottom-color: #3F96C7; }
+  section:nth-child(odd) article:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    top: -16px;
+    left: 66px;
+    border: 8px solid transparent;
+    position: absolute;
+    border-bottom-color: #6FC0EC; }
   article {
     float: left;
     display: block;
@@ -131,16 +168,6 @@ Media
     border-left: none; }
     article:last-child {
       margin-right: 0; }
-    article:before {
-      content: "";
-      display: block;
-      height: 0;
-      width: 0;
-      top: -16px;
-      left: 66px;
-      border: 8px solid transparent;
-      border-bottom-color: #3F96C7;
-      position: absolute; }
   .stamp {
     float: left;
     margin: 0 0 10px 40px; }

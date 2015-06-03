@@ -38,6 +38,49 @@ aside {
 section {
   overflow: auto;
   padding-top: 5px;
+
+  &:nth-child(even) {
+    figure {
+      background: $darkblue;
+    }
+
+    article:before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      top: 8px;
+      left: 24px;
+      border: 8px solid transparent;
+      position: absolute;
+      border-right-color: $darkblue;
+    }
+
+    .hour {
+      color: $darkblue;
+    }
+  }
+  &:nth-child(odd) {
+    figure {
+      background: $blue;
+    }
+
+    article:before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      top: 8px;
+      left: 24px;
+      border: 8px solid transparent;
+      position: absolute;
+      border-right-color: $blue;
+    }
+
+    .hour {
+      color: $blue;
+    }
+  }
 }
 
 article {
@@ -46,22 +89,9 @@ article {
   height: 100%;
   padding: 0 25px 15px;
   border-left: 8px solid $lightblue;
-
-  &:before {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    top: 8px;
-    left: 24px;
-    border: 8px solid transparent;
-    border-right-color: $darkblue;
-    position: absolute;
-  }
 }
 
 figure {
-  background: $darkblue;
   height: 100%;
   margin: 0 15px;
   padding: 25px;
@@ -129,11 +159,11 @@ Media
     @include span-columns(12);
   }
 
-  article {
-    @include span-columns(12);
-    border-left: none;
+  section {
 
-    &:before {
+
+  &:nth-child(even) {
+    article:before {
       content: "";
       display: block;
       height: 0;
@@ -141,9 +171,30 @@ Media
       top: -16px;
       left: 66px;
       border: 8px solid transparent;
-      border-bottom-color: $darkblue;
       position: absolute;
+      border-bottom-color: $darkblue;
     }
+  }
+
+  &:nth-child(odd) {
+
+    article:before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      top: -16px;
+      left: 66px;
+      border: 8px solid transparent;
+      position: absolute;
+      border-bottom-color: $blue;
+    }
+  }
+}
+
+  article {
+    @include span-columns(12);
+    border-left: none;
   }
 
   .stamp {
